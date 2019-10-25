@@ -8,7 +8,7 @@ const { measureText } = require('pureimage/src/text')
 const fontName = 'cabin-bold'
 const Font = PureImage.registerFont(join(__dirname, 'font', 'cabin-bold.ttf'), fontName)
 
-module.exports = async function createAvatar ({ firstName, lastName }, stream, options = {}) {
+exports.createAvatar = async function createAvatar ({ firstName, lastName }, stream, options = {}) {
   const size = options.size || 128
   const background = options.background || '#'+Math.floor(Math.random()*16777215).toString(16)
   const { hex: foreground } = Chromatism.contrastRatio(background)

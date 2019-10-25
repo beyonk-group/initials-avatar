@@ -1,6 +1,6 @@
 'use strict'
 
-const createAvatar = require('.')
+const { createAvatar } = require('.')
 const { join } = require('path')
 const { mkdtempSync, createWriteStream, readFileSync } = require('fs')
 const { tmpdir } = require('os')
