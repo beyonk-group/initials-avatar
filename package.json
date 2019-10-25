@@ -1,6 +1,6 @@
 {
   "name": "@beyonk/initials-avatar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Initials based avatar generator in pure JS",
   "main": "index.js",
   "scripts": {
