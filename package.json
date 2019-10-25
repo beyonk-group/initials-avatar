@@ -1,0 +1,19 @@
+{
+  "name": "@beyonk/initials-avatar",
+  "version": "1.0.0",
+  "description": "Initials based avatar generator in pure JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha *.spec.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chromatism": "^3.0.0",
+    "pureimage": "^0.1.6"
+  },
+  "devDependencies": {
+    "@hapi/code": "^7.0.0",
+    "mocha": "^6.2.2"
+  }
+}
