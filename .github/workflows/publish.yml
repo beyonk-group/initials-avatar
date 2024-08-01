@@ -21,4 +21,4 @@ jobs:
         run: |
           pnpm install
           pnpm test
-          pnpm publish --publish-branch=${{github.ref}}
+          pnpm publish --no-git-checks
