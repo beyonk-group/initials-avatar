@@ -23,7 +23,7 @@ exports.createAvatar = async function createAvatar ({ firstName, lastName }, str
       const fontSize = size / 2
       ctx.font = `${fontSize}pt '${fontName}'`
       ctx.fillStyle = foreground
-      const t = `${firstName[0]}${lastName[0]}`
+      const t = `${firstName?.[0] ?? '-'}${lastName?.[0] ?? '-'}`
       const { width } = measureText(ctx, t)
       ctx.fillText(t, (size / 2) - width / 2, size / 1.4)
 
