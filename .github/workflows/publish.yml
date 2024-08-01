@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
 
       - name: authorise pnpm
         run: |
@@ -23,4 +21,4 @@ jobs:
         run: |
           pnpm install
           pnpm test
-          pnpm publish
+          pnpm publish --publish-branch=${{github.ref}}
