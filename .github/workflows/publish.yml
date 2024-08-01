@@ -1,0 +1,24 @@
+name: Node.js Package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: authorise pnpm
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+          corepack enable
+
+      - name: publish
+        run: |
+          pnpm install
+          pnpm test
+          pnpm publish
